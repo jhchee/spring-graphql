@@ -1,18 +1,9 @@
 package github.jhchee.springgraphql.controllers;
 
-import github.jhchee.springgraphql.domains.Author;
-import github.jhchee.springgraphql.domains.Post;
 import github.jhchee.springgraphql.repositories.AuthorRepository;
 import github.jhchee.springgraphql.repositories.PostRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.graphql.data.method.annotation.Argument;
-import org.springframework.graphql.data.method.annotation.MutationMapping;
-import org.springframework.graphql.data.method.annotation.QueryMapping;
-import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
-
-import java.util.List;
-import java.util.UUID;
 
 @Controller
 @RequiredArgsConstructor
@@ -21,6 +12,11 @@ public class PostController {
     private final AuthorRepository authorRepository;
 
 //    @QueryMapping
+//    public List<Post> recentPosts(@Argument int count, @Argument int offset) {
+//        return postRepository.getRecentPosts(count, offset);
+//    }
+
+//        @QueryMapping
 //    public List<Post> recentPosts(@Argument int count, @Argument int offset) {
 //        return postRepository.getRecentPosts(count, offset);
 //    }
