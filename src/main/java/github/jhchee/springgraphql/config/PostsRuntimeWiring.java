@@ -1,5 +1,6 @@
 package github.jhchee.springgraphql.config;
 
+import github.jhchee.springgraphql.directives.DateFormattingWiring;
 import github.jhchee.springgraphql.directives.UpperCaseDirectiveWiring;
 import github.jhchee.springgraphql.repositories.PostRepository;
 import github.jhchee.springgraphql.scalars.Scalars;
@@ -32,6 +33,7 @@ public class PostsRuntimeWiring implements RuntimeWiringConfigurer {
                 .scalar(Scalars.localDateTimeType())
                 .scalar(Scalars.instantType())
                 .directive("uppercase", new UpperCaseDirectiveWiring())
+                .directive("dateformat", new DateFormattingWiring())
                 .build();
     }
 }
